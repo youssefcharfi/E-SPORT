@@ -4,9 +4,8 @@ export const fetchLeagues = async (
   gameVideo = "all"
 ) => {
   if (gameVideo === "all") {
-    console.log("j'ai all " + gameVideo);
     const response = await fetch(
-      process.env.REACT_APP_LEAGUES_API_URL +
+      "https://api.pandascore.co/leagues" +
         "?page=" +
         page +
         "&per_page=" +
@@ -16,7 +15,8 @@ export const fetchLeagues = async (
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + process.env.REACT_APP_LEAGUES_API_TOKEN,
+          Authorization:
+            "Bearer Ri33FURQcwndvlwisGO-7iR-bwOPI2d2VlTnF5A_Uq9J-_VrQRw",
         },
       }
     );
@@ -24,7 +24,6 @@ export const fetchLeagues = async (
     const json = await response.json();
     return { json, response };
   } else {
-    console.log("j'ai autre " + gameVideo);
     const response = await fetch(
       "https://api.pandascore.co/" +
         gameVideo +
@@ -38,7 +37,8 @@ export const fetchLeagues = async (
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + process.env.REACT_APP_LEAGUES_API_TOKEN,
+          Authorization:
+            "Bearer Ri33FURQcwndvlwisGO-7iR-bwOPI2d2VlTnF5A_Uq9J-_VrQRw",
         },
       }
     );
@@ -50,9 +50,8 @@ export const fetchLeagues = async (
 
 export const fetchTeams = async (page = 1, per_page = 5, gameVideo = "all") => {
   if (gameVideo === "all") {
-    console.log("j'ai all " + gameVideo);
     const response = await fetch(
-      process.env.REACT_APP_TEAMS_API_URL +
+      "https://api.pandascore.co/teams" +
         "?page=" +
         page +
         "&per_page=" +
@@ -62,7 +61,8 @@ export const fetchTeams = async (page = 1, per_page = 5, gameVideo = "all") => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + process.env.REACT_APP_LEAGUES_API_TOKEN,
+          Authorization:
+            "Bearer Ri33FURQcwndvlwisGO-7iR-bwOPI2d2VlTnF5A_Uq9J-_VrQRw",
         },
       }
     );
@@ -70,7 +70,6 @@ export const fetchTeams = async (page = 1, per_page = 5, gameVideo = "all") => {
     const json = await response.json();
     return { json, response };
   } else {
-    console.log("j'ai autre " + gameVideo);
     const response = await fetch(
       "https://api.pandascore.co/" +
         gameVideo +
@@ -84,7 +83,8 @@ export const fetchTeams = async (page = 1, per_page = 5, gameVideo = "all") => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + process.env.REACT_APP_LEAGUES_API_TOKEN,
+          Authorization:
+            "Bearer Ri33FURQcwndvlwisGO-7iR-bwOPI2d2VlTnF5A_Uq9J-_VrQRw",
         },
       }
     );
