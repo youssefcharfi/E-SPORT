@@ -7,13 +7,12 @@ function League() {
   let { leagueId } = useParams();
 
   useEffect(() => {
-    fetch("https://api.pandascore.co/leagues" + "/" + leagueId, {
+    fetch(process.env.REACT_APP_LEAGUES_API_URL + "/" + leagueId, {
       mode: "cors",
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization:
-          "Bearer " + "Ri33FURQcwndvlwisGO-7iR-bwOPI2d2VlTnF5A_Uq9J-_VrQRw",
+        Authorization: "Bearer " + process.env.REACT_APP_LEAGUES_API_TOKEN,
       },
     })
       .then((response) => response.json())
@@ -34,8 +33,8 @@ function League() {
       </div>
       <div style={{ width: "35rem" }}>
         <ul className="list-group list-group-flush">
-          {league.series.map((serie) => (
-            <li className="list-group-item my-2 shadow">
+          {league.series.map((serie, index) => (
+            <li className="list-group-item my-2 shadow" key={index}>
               <h6 className="mx-5">{serie.full_name}</h6>
               <h6>
                 From: {serie.begin_at} - To: {serie.end_at}

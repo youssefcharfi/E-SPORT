@@ -10,13 +10,12 @@ function Team() {
   let { teamId } = useParams();
 
   useEffect(() => {
-    fetch("https://api.pandascore.co/teams" + "/" + teamId, {
+    fetch(process.env.REACT_APP_TEAMS_API_URL + "/" + teamId, {
       mode: "cors",
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization:
-          "Bearer " + "Ri33FURQcwndvlwisGO-7iR-bwOPI2d2VlTnF5A_Uq9J-_VrQRw",
+        Authorization: "Bearer " + process.env.REACT_APP_LEAGUES_API_TOKEN,
       },
     })
       .then((response) => response.json())
