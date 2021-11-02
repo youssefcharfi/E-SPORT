@@ -8,7 +8,6 @@ function League() {
 
   useEffect(() => {
     fetch(process.env.REACT_APP_LEAGUES_API_URL + "/" + leagueId, {
-      mode: "cors",
       method: "GET",
       headers: {
         "Content-Type": "application/json",

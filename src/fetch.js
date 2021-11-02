@@ -11,7 +11,6 @@ export const fetchLeagues = async (
         "&per_page=" +
         per_page,
       {
-        mode: "cors",
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -32,7 +31,6 @@ export const fetchLeagues = async (
         "&per_page=" +
         per_page,
       {
-        mode: "cors",
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +53,6 @@ export const fetchTeams = async (page = 1, per_page = 5, gameVideo = "all") => {
         "&per_page=" +
         per_page,
       {
-        mode: "cors",
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +73,6 @@ export const fetchTeams = async (page = 1, per_page = 5, gameVideo = "all") => {
         "&per_page=" +
         per_page,
       {
-        mode: "cors",
         method: "GET",
         headers: {
           "Content-Type": "application/json",

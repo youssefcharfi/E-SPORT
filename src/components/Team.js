@@ -11,7 +11,6 @@ function Team() {
 
   useEffect(() => {
     fetch(process.env.REACT_APP_TEAMS_API_URL + "/" + teamId, {
-      mode: "cors",
       method: "GET",
       headers: {
         "Content-Type": "application/json",
