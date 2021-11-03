@@ -10,7 +10,7 @@ function Navbar(props) {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          A-Sport by Youssef Charfi
+          E-Sport by Youssef Charfi
         </Link>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
