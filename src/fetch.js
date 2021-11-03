@@ -23,7 +23,7 @@ export const fetchLeagues = async (
     return { json, response };
   } else {
     const response = await fetch(
-      "https://api.pandascore.co/" +
+      "https://e-sport-orpin.vercel.app/api/" +
         gameVideo +
         "/leagues" +
         "?page=" +
@@ -65,7 +65,7 @@ export const fetchTeams = async (page = 1, per_page = 5, gameVideo = "all") => {
     return { json, response };
   } else {
     const response = await fetch(
-      "https://api.pandascore.co/" +
+      "https://e-sport-orpin.vercel.app/api/" +
         gameVideo +
         "/teams" +
         "?page=" +
